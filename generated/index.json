@@ -1,0 +1,583 @@
+{
+  "count": 25,
+  "entities": [
+    {
+      "domain": "hip",
+      "id": "org:health-intent-partners",
+      "path": "graph/orgs/health-intent-partners.md",
+      "rel": {
+        "owns": [
+          "project:dc-health-impact"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Matt's consulting practice. Advisory work at the intersection of health, infrastructure, and capital.",
+      "title": "Health Intent Partners",
+      "type": "org",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "red-cell",
+      "id": "org:red-cell-partners",
+      "path": "graph/orgs/red-cell-partners.md",
+      "rel": {
+        "collaborates_on": [
+          "project:dc-health-impact"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Venture firm with national-security-adjacent portfolio companies, including Claros.",
+      "title": "Red Cell Partners",
+      "type": "org",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "org:uva-darden",
+      "path": "graph/orgs/uva-darden.md",
+      "rel": {
+        "collaborates_on": [
+          "project:dc-health-impact"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Home of the co-authors on the data center publication tracks, and publisher of Darden Ideas to Action — the fastest path to placement in that strategy.",
+      "title": "UVA Darden School of Business",
+      "type": "org",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "uva-em",
+      "id": "org:uva-emergency-medicine",
+      "path": "graph/orgs/uva-emergency-medicine.md",
+      "rel": {
+        "owns": [
+          "project:em-residency-research"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Matt's academic home. He supports the residency research program.",
+      "title": "UVA Department of Emergency Medicine",
+      "type": "org",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "mdp-hds",
+      "id": "org:uva-medical-design-program",
+      "path": "graph/orgs/uva-medical-design-program.md",
+      "rel": {
+        "owns": [
+          "project:mdp-hds"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Ten years running, 200+ students. Runs the Health Design Sprint alongside the core program.",
+      "title": "UVA Medical Design Program",
+      "type": "org",
+      "updated": "2026-07-30"
+    },
+    {
+      "days_in_stage": 116,
+      "deliverables": [
+        {
+          "date": "2026-04-05",
+          "keywords": [
+            "op-ed",
+            "Virginia",
+            "guest essay"
+          ],
+          "mirror": false,
+          "share": "private",
+          "status": "draft",
+          "title": "NYT guest essay draft v1",
+          "type": "docx",
+          "version": "v1"
+        }
+      ],
+      "domain": "hip",
+      "id": "paper:dc-health-oped",
+      "keywords": [
+        "op-ed",
+        "Virginia",
+        "Loudoun",
+        "public opinion",
+        "bipartisan opposition"
+      ],
+      "next_action": "Adapt the existing NYT guest essay draft for WaPo or Politico and send",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/papers/dc-health-oped.md",
+      "priority": "medium",
+      "rel": {
+        "authored_by": [
+          "person:matt-trowbridge"
+        ],
+        "part_of": [
+          "project:dc-health-impact"
+        ]
+      },
+      "review_by": "2026-08-04",
+      "sensitivity": "T2",
+      "status": "drafting",
+      "summary": "Track 5, the fast lane. Targets WaPo, Politico, or The Hill on the Virginia angle. Requires no co-author and no permission.",
+      "title": "Data Center Health Impact — Op-Ed (Virginia angle)",
+      "type": "paper",
+      "updated": "2026-07-30"
+    },
+    {
+      "days_in_stage": 116,
+      "domain": "hip",
+      "id": "paper:health-informed-computing-cmr",
+      "keywords": [
+        "materiality pathways",
+        "impact-weighted accounts",
+        "market failure",
+        "benchmarking"
+      ],
+      "next_action": "Hold until the Darden piece places — do not start in parallel",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/papers/health-informed-computing-cmr.md",
+      "priority": "medium",
+      "rel": {
+        "authored_by": [
+          "person:matt-trowbridge",
+          "person:michael-lenox"
+        ],
+        "blocked_by": [
+          "paper:mispriced-asset-darden"
+        ],
+        "part_of": [
+          "project:dc-health-impact"
+        ],
+        "targets": [
+          "venue:california-management-review"
+        ]
+      },
+      "sensitivity": "T2",
+      "status": "idea",
+      "summary": "Track 3, the theory-forward version of the argument. Seven-section outline complete, built on the Rogers and Serafeim materiality-pathway framework with impact-",
+      "target_date": "2026-09-01",
+      "title": "Health-Informed Computing: A Framework for Sustainable AI Infrastructure Development",
+      "type": "paper",
+      "updated": "2026-07-30"
+    },
+    {
+      "days_in_stage": 116,
+      "domain": "hip",
+      "id": "paper:hia-systematic-framework",
+      "keywords": [
+        "systematic review",
+        "health pathways",
+        "dose-response",
+        "lifecycle",
+        "equity",
+        "IFC PS4"
+      ],
+      "next_action": "Begin the systematic review methods section — the one track that does not depend on anyone else",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/papers/hia-systematic-framework.md",
+      "priority": "high",
+      "rel": {
+        "authored_by": [
+          "person:matt-trowbridge"
+        ],
+        "part_of": [
+          "project:dc-health-impact"
+        ],
+        "targets": [
+          "venue:ajph"
+        ]
+      },
+      "review_by": "2026-08-11",
+      "sensitivity": "T2",
+      "status": "scoped",
+      "summary": "Track 4, and **the one that most directly counts toward the peer-review output goal.** Seven-section outline complete: six health pathways with dose-response ev",
+      "target_date": "2026-11-01",
+      "title": "Health Impact Assessment for AI Data Center Development: A Systematic Framework",
+      "type": "paper",
+      "updated": "2026-07-30"
+    },
+    {
+      "days_in_stage": 116,
+      "domain": "hip",
+      "id": "paper:mispriced-asset-darden",
+      "keywords": [
+        "materiality",
+        "social license",
+        "siting",
+        "predictability premium",
+        "HIA"
+      ],
+      "next_action": "Send Lenox email #1 — the one thing blocking this entire track",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/papers/mispriced-asset-darden.md",
+      "priority": "critical",
+      "rel": {
+        "authored_by": [
+          "person:matt-trowbridge",
+          "person:michael-lenox",
+          "person:becky-duff"
+        ],
+        "part_of": [
+          "project:dc-health-impact"
+        ],
+        "targets": [
+          "venue:darden-ideas-to-action"
+        ]
+      },
+      "review_by": "2026-08-04",
+      "sensitivity": "T2",
+      "status": "scoped",
+      "summary": "Track 1, and the fastest path to placement. Six-section outline is complete: the $156B problem, the pricing failure, the materiality trajectory, what an HIA act",
+      "target_date": "2026-04-10",
+      "title": "The Mispriced Asset: Why AI Data Centers Need Health Impact Assessment",
+      "type": "paper",
+      "updated": "2026-07-30"
+    },
+    {
+      "days_in_stage": 116,
+      "domain": "hip",
+      "id": "paper:nature-cities-tiwari-response",
+      "keywords": [
+        "implementation gap",
+        "lifecycle HIA",
+        "CUP",
+        "benchmarking",
+        "dual externality"
+      ],
+      "next_action": "Decide: reframe as a standalone submission, or drop — the response window has almost certainly closed",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/papers/nature-cities-tiwari-response.md",
+      "priority": "high",
+      "rel": {
+        "authored_by": [
+          "person:matt-trowbridge"
+        ],
+        "part_of": [
+          "project:dc-health-impact"
+        ],
+        "targets": [
+          "venue:nature-cities"
+        ]
+      },
+      "review_by": "2026-08-04",
+      "sensitivity": "T2",
+      "status": "scoped",
+      "summary": "Track 2. Argument: Tiwari et al. documented the problem; this proposes the operational framework. The gap between documentation and implementation is where the ",
+      "target_date": "2026-04-30",
+      "title": "From Documentation to Implementation: A Health Impact Assessment Framework for Data Center Development",
+      "type": "paper",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "uva-em",
+      "id": "person:andrew-taylor",
+      "path": "graph/people/andrew-taylor.md",
+      "rel": {
+        "collaborates_on": [
+          "project:em-residency-research"
+        ],
+        "works_at": [
+          "org:uva-emergency-medicine"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Sponsor for Matt's student research leadership role and the senior research voice in the department.",
+      "title": "Andrew Taylor, MD",
+      "type": "person",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "uva-em",
+      "id": "person:andy-muck",
+      "path": "graph/people/andy-muck.md",
+      "rel": {
+        "works_at": [
+          "org:uva-emergency-medicine"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Department Chair, and the highest-deference recipient in the UVA EM domain.",
+      "title": "Andy Muck, MD",
+      "type": "person",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "person:becky-duff",
+      "path": "graph/people/becky-duff.md",
+      "rel": {
+        "collaborates_on": [
+          "paper:mispriced-asset-darden"
+        ],
+        "works_at": [
+          "org:uva-darden"
+        ]
+      },
+      "sensitivity": "T2",
+      "status": "active",
+      "summary": "Third author on the Darden Ideas to Action track. The introduction was still pending as of the April publication strategy and appears not to have been made.",
+      "title": "Becky Duff",
+      "type": "person",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "uva-em",
+      "id": "person:bill-brady",
+      "path": "graph/people/bill-brady.md",
+      "rel": {
+        "works_at": [
+          "org:uva-emergency-medicine"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Thirty-two-year UVA EM veteran and Editor-in-Chief of the American Journal of Emergency Medicine.",
+      "title": "Bill Brady, MD",
+      "type": "person",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "personal",
+      "id": "person:matt-trowbridge",
+      "path": "graph/people/matt-trowbridge.md",
+      "rel": {
+        "works_at": [
+          "org:uva-emergency-medicine",
+          "org:health-intent-partners",
+          "org:uva-medical-design-program",
+          "org:red-cell-partners"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "The owner of this system. Works across four domains that rarely overlap in audience but constantly overlap in time: HIP consulting, UVA Emergency Medicine, the ",
+      "title": "Matt Trowbridge",
+      "type": "person",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "person:michael-lenox",
+      "path": "graph/people/michael-lenox.md",
+      "rel": {
+        "collaborates_on": [
+          "project:dc-health-impact",
+          "paper:mispriced-asset-darden",
+          "paper:health-informed-computing-cmr"
+        ],
+        "works_at": [
+          "org:uva-darden"
+        ]
+      },
+      "sensitivity": "T2",
+      "status": "active",
+      "summary": "Offered a tri-author collaboration on the Darden Ideas to Action piece and indicated near-certain acceptance on that track. The most important open thread in th",
+      "title": "Michael Lenox",
+      "type": "person",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "uva-em",
+      "id": "person:tom-hartka",
+      "path": "graph/people/tom-hartka.md",
+      "rel": {
+        "collaborates_on": [
+          "project:em-residency-research"
+        ],
+        "works_at": [
+          "org:uva-emergency-medicine"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Led Research Day in 2025 and advises on it this year — the institutional memory for how the day actually runs.",
+      "title": "Tom Hartka, MD",
+      "type": "person",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "project:dc-health-impact",
+      "keywords": [
+        "data center",
+        "health impact assessment",
+        "HIA",
+        "materiality",
+        "siting",
+        "grid",
+        "social license"
+      ],
+      "next_action": "Triage all five publication tracks — two target dates have passed and a third is due now",
+      "notion_url": "https://app.notion.com/p/3390f36c15708145b5b3f4a9b382244b",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/projects/dc-health-impact.md",
+      "priority": "high",
+      "rel": {
+        "collaborates_on": [
+          "person:michael-lenox",
+          "person:becky-duff"
+        ],
+        "governed_by": [
+          "org:health-intent-partners"
+        ],
+        "owns": [
+          "paper:mispriced-asset-darden",
+          "paper:nature-cities-tiwari-response",
+          "paper:health-informed-computing-cmr",
+          "paper:hia-systematic-framework",
+          "paper:dc-health-oped"
+        ]
+      },
+      "review_by": "2026-08-06",
+      "sensitivity": "T2",
+      "status": "active",
+      "summary": "The argument that health impacts of AI data center development are real, documented, and systematically excluded from the transaction — and that this is a prici",
+      "title": "AI Data Center Health Impact Assessment",
+      "type": "project",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "uva-em",
+      "id": "project:em-residency-research",
+      "keywords": [
+        "residency",
+        "research day",
+        "resident projects",
+        "mentorship",
+        "IRB"
+      ],
+      "next_action": "Confirm Research Day timeline and this year's resident project roster",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/projects/em-residency-research.md",
+      "priority": "high",
+      "rel": {
+        "collaborates_on": [
+          "person:andrew-taylor",
+          "person:tom-hartka"
+        ],
+        "part_of": [
+          "org:uva-emergency-medicine"
+        ]
+      },
+      "review_by": "2026-08-13",
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "Matt's role supporting research within the Emergency Medicine residency: helping residents get projects scoped, through IRB, and to presentation or publication.",
+      "title": "UVA EM Residency Research Program",
+      "type": "project",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "mdp-hds",
+      "id": "project:mdp-hds",
+      "keywords": [
+        "design sprint",
+        "medical design",
+        "curriculum",
+        "students",
+        "workshop"
+      ],
+      "next_action": "Identify which MDP materials are reusable assets versus one-off documents",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/projects/mdp-hds.md",
+      "priority": "medium",
+      "rel": {
+        "part_of": [
+          "org:uva-medical-design-program"
+        ]
+      },
+      "review_by": "2026-08-27",
+      "sensitivity": "T1",
+      "status": "active",
+      "summary": "The teaching program and its sprint format. Ten years of accumulated material — syllabi, workshop plans, handouts, executive briefs for deans and partners.",
+      "title": "Medical Design Program / Health Design Sprint",
+      "type": "project",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "uva-em",
+      "id": "project:medical-ai-literature-map",
+      "keywords": [
+        "semantic search",
+        "literature retrieval",
+        "cross-disciplinary",
+        "NLM",
+        "R01",
+        "medical AI"
+      ],
+      "next_action": "Determine whether UVA-provisioned AI accounts can carry this work before scaling the corpus",
+      "owner": "person:matt-trowbridge",
+      "path": "graph/projects/medical-ai-literature-map.md",
+      "priority": "medium",
+      "rel": {
+        "part_of": [
+          "org:uva-emergency-medicine"
+        ]
+      },
+      "review_by": "2026-08-20",
+      "sensitivity": "T1",
+      "status": "planning",
+      "summary": "Cross-disciplinary literature retrieval — mapping how medical AI research connects across fields that do not cite each other. Purely academic, which makes it th",
+      "title": "Medical AI Literature Map / NLM Semantic Search",
+      "type": "project",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "venue:ajph",
+      "path": "graph/venues/ajph.md",
+      "sensitivity": "T1",
+      "status": "open",
+      "summary": "Primary target for the systematic health impact assessment framework paper, with Environmental Health Perspectives and the Journal of Urban Health as alternates",
+      "title": "American Journal of Public Health",
+      "type": "venue",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "venue:california-management-review",
+      "path": "graph/venues/california-management-review.md",
+      "sensitivity": "T1",
+      "status": "open",
+      "summary": "Berkeley's management journal. Primary target for the theory-forward data center piece, with MIT Sloan Management Review as the alternate.",
+      "title": "California Management Review",
+      "type": "venue",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "venue:darden-ideas-to-action",
+      "path": "graph/venues/darden-ideas-to-action.md",
+      "rel": {
+        "part_of": [
+          "org:uva-darden"
+        ]
+      },
+      "sensitivity": "T1",
+      "status": "rolling",
+      "summary": "Darden's practitioner-facing outlet. Fastest path to placement in the data center publication strategy — weeks to draft, near-certain acceptance per Lenox.",
+      "title": "Darden Ideas to Action",
+      "type": "venue",
+      "updated": "2026-07-30"
+    },
+    {
+      "domain": "hip",
+      "id": "venue:nature-cities",
+      "path": "graph/venues/nature-cities.md",
+      "sensitivity": "T1",
+      "status": "open",
+      "summary": "Published the Tiwari et al. piece in March 2026 that the response track was built to answer.",
+      "title": "Nature Cities",
+      "type": "venue",
+      "updated": "2026-07-30"
+    }
+  ],
+  "generated_on": "2026-07-30"
+}

@@ -1,64 +1,89 @@
-# Personal Context Portfolio
+# Personal context spine
 
-Every AI agent, tool, and system you use needs to know who you are. Right now, you re-explain yourself from scratch every time — your role, your projects, your preferences, your constraints. It's the most repetitive, highest-friction part of working with AI, and it gets exponentially worse as the number of agents in your life grows from one to ten to fifty.
+Matt Trowbridge's context library and agentic harness. A typed markdown entity graph in git,
+plus the commands, skills, and subagents that operate on it.
 
-The personal context portfolio fixes this. It's a structured set of markdown files that together represent you as a context package — something any agent, any tool, any AI system can ingest and immediately understand who it's working with.
+The organizing goal is **output** — five to ten peer-review-level papers out the door. Everything
+here is judged against that.
 
-It's not a resume. It's not a profile. It's an operating manual for any AI that works for you.
+## The idea
 
-## What's In It
+The system is split in two, and the boundary never blurs:
 
-Ten files, each covering a different dimension of who you are and how you work:
+| | **Substrate** — durable | **Harness** — disposable |
+|---|---|---|
+| What | Identity, voice, ontology, entities, manuscripts | `CLAUDE.md`, `.claude/`, `scripts/` |
+| Format | Markdown + YAML frontmatter | Whatever the current tool wants |
+| Lifetime | Years. Outlives any model or vendor. | Rebuilt whenever the field moves. |
 
-| File | What It Captures |
-|------|-----------------|
-| `identity.md` | Who you are in one page — the file an agent reads if it can only read one |
-| `role-and-responsibilities.md` | What your weeks actually look like, not what your job description says |
-| `current-projects.md` | Active workstreams, status, priority, what done looks like |
-| `team-and-relationships.md` | Key people, how you interact, what they need from you |
-| `tools-and-systems.md` | Your stack, your setup, what connects to what |
-| `communication-style.md` | How you write, how you want things written for you |
-| `goals-and-priorities.md` | What you're optimizing for and what you're deliberately ignoring |
-| `preferences-and-constraints.md` | Hard rules, strong opinions, things any agent should respect |
-| `domain-knowledge.md` | What you know that a general-purpose AI doesn't |
-| `decision-log.md` | How you make decisions, with real examples |
+**The invariant: the harness reads the substrate; the substrate never references the harness.**
+No entity file mentions a command, a skill, or a model name. That one rule means a total harness
+rewrite is a delete-and-regenerate, never a migration — which is the entire answer to "best
+practices keep shifting."
 
-## Design Principles
-
-**Markdown-first.** Every AI system on earth can read markdown. It's the universal interchange format for context. Not JSON, not PDFs, not databases. Markdown files that are human-readable AND machine-readable.
-
-**Modular, not monolithic.** Not one giant "about me" file. Separate files for separate domains. An agent prepping your meetings doesn't need your full life story — it needs your calendar context, team roster, and meeting preferences. Modularity lets agents grab what's relevant.
-
-**Living, not static.** This isn't a thing you write once. It's a thing you maintain — or better, that your agents help you maintain. Your projects file updates as projects change. Your priorities file shifts quarterly. The portfolio evolves with you.
-
-**Portable across everything.** Works with Claude, works with ChatGPT, works with OpenClaw agents, works with whatever comes next. No vendor lock-in. It's just files.
-
-## Two Ways to Build Yours
-
-**Use the web app.** A purpose-built interviewer agent walks you through the whole process. You answer questions, it drafts your files, you correct what it gets wrong, and you walk away with your complete portfolio. Zero setup, zero friction. → [Link to app]
-
-**Do it yourself.** Fork this repo and use the templates in `/templates`. Each template includes the interview questions your AI build partner should ask you, plus the output structure for the finished file. Hand any template to Claude or ChatGPT and say "let's do this one."
-
-## After You Build It
-
-The portfolio is raw material. What makes it powerful is wiring it into the systems you actually use. The `/wiring` directory has guides for exposing your portfolio as an MCP resource, using it in Claude Projects, connecting it to OpenClaw agents, and more. That's the real work — and it's on you.
-
-## Repo Structure
+## Layout
 
 ```
-personal-context-portfolio/
-├── README.md                    ← you are here
-├── GETTING-STARTED.md           ← step-by-step for both paths
-├── templates/                   ← empty templates with interview protocols
-├── examples/                    ← filled-out examples for three personas
-│   ├── knowledge-worker/
-│   ├── executive/
-│   └── entrepreneur/
-├── wiring/                      ← guides for connecting your portfolio to AI tools
-└── interview-protocol/
-    └── agent-system-prompt.md   ← the full system prompt from the web app
+CLAUDE.md              always-on router (capped at 120 lines)
+ontology/
+  schema.json          the machine-readable ontology -- the validator reads THIS
+  schema.md            node types and why each earns its place
+  conventions.md       ids, dates, house style
+graph/                 entities: people, orgs, projects, papers, venues,
+                       engagements, sources, decisions
+papers/<slug>/         per-manuscript stage artifacts
+context/               the ten-file identity core
+voice/                 voice profiles and real sent samples as ground truth
+generated/             INDEX.md, OPEN-LOOPS.md, index.json, board.html -- derived, committed
+scripts/               graph.py, build_board.py, sync_skills.py -- stdlib only
+.claude/               commands, skills, subagents, hooks
+stock/                 the upstream scaffold this repo started from. Reference only.
 ```
 
-## License
+## Using it
 
-MIT. Fork it, customize it, use it however you want.
+```bash
+python3 scripts/graph.py validate     # is the graph well-formed?
+python3 scripts/graph.py index        # regenerate generated/
+python3 scripts/graph.py audit        # health report + paper pipeline
+python3 scripts/build_board.py        # generated/board.html
+
+bash scripts/install_hooks.sh         # pre-commit validation
+python3 scripts/sync_skills.py        # dry run; --apply to write to ~/.claude/skills
+```
+
+Commands: `/brief` · `/weekly` · `/paper <id> <stage>` · `/graph-audit` · `/board`
+
+## Two properties worth protecting
+
+**Progressive disclosure.** Agents read `generated/INDEX.md` or `OPEN-LOOPS.md`, then the three to
+six entities they need — never `graph/` in bulk. A task stays around 10k tokens whether the graph
+holds 25 entities or 500. Bulk-reading breaks this permanently.
+
+**Zero-cost maintenance.** `scripts/` is standard-library Python with no network calls, no API
+keys, and no model calls. CI enforces it. Graph upkeep that costs tokens is graph upkeep that
+doesn't happen.
+
+## Sensitivity
+
+This repo is the **T1/T2 spine**. T3 warns; T4 and T5 are hard errors, caught by the validator.
+Anything more sensitive stays in its secure home and is referenced by pointer:
+
+```yaml
+sensitivity: T2
+raw_location: "local:~/Projects/acme"
+raw_sensitivity: T4
+```
+
+The `hip-tier-router` skill is the single authority on tiers. `data_class` (`phi`, `irb`, `ferpa`)
+is additive and orthogonal — not a competing model. `phi` is forbidden here outright.
+
+## Extending it
+
+Add a node type, edge, status value, or leakage pattern by editing `ontology/schema.json`. The
+validator reads that file; there is no Python to change. That separation is deliberate.
+
+---
+
+Started from Anthropic's [personal context portfolio](https://github.com/anthropics) scaffold,
+preserved under `stock/`.

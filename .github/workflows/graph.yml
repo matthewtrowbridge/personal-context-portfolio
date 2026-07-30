@@ -1,0 +1,42 @@
+name: graph
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No dependency install step on purpose: graph.py and build_board.py are
+      # stdlib-only. Nothing to pip install, nothing to pin, nothing to break.
+
+      - name: Validate the graph
+        run: python3 scripts/graph.py validate
+
+      - name: Check generated/ is current
+        run: |
+          python3 scripts/graph.py index
+          python3 scripts/build_board.py
+          if ! git diff --quiet -- generated/; then
+            echo "::error::generated/ is stale. Run 'python3 scripts/graph.py index && python3 scripts/build_board.py' and commit the result."
+            git diff --stat -- generated/
+            exit 1
+          fi
+
+      - name: Confirm no network or key usage in scripts
+        run: |
+          # Graph tooling must never make model calls or reach the network --
+          # that is what keeps maintenance off the token budget.
+          if grep -rnE 'urllib|requests|http[s]?://|ANTHROPIC_API_KEY|OPENAI_API_KEY|socket' scripts/ ; then
+            echo "::error::scripts/ must stay offline and key-free"
+            exit 1
+          fi
+          echo "scripts/ is offline and key-free"

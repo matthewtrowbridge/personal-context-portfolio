@@ -1,0 +1,104 @@
+{
+  "_comment": "Machine-readable ontology. scripts/graph.py reads THIS file, never hardcoded rules. Extending the ontology is a JSON edit, not a code change. Human documentation lives in ontology/schema.md.",
+  "version": 1,
+
+  "domains": ["hip", "uva-em", "mdp-hds", "red-cell", "personal"],
+  "sensitivity_levels": ["T1", "T2", "T3", "T4", "T5"],
+  "data_classes": ["phi", "irb", "ferpa"],
+
+  "spine_rules": {
+    "_comment": "This repo is the T1/T2 spine. Anything more sensitive lives elsewhere and is referenced by pointer stub.",
+    "max_sensitivity": "T2",
+    "warn_sensitivity": ["T3"],
+    "forbidden_data_classes": ["phi"]
+  },
+
+  "edges": [
+    "part_of", "owns", "authored_by", "collaborates_on", "targets",
+    "blocked_by", "depends_on", "cites", "derived_from", "supersedes",
+    "works_at", "governed_by", "relevant_to"
+  ],
+
+  "common_required": ["id", "type", "title", "status", "domain", "sensitivity", "updated"],
+
+  "types": {
+    "person": {
+      "dir": "graph/people",
+      "status": ["active", "dormant", "archived"],
+      "optional": ["role", "organization", "email", "contact_cadence", "last_contact", "next_ping_due", "open_asks", "notion_url"],
+      "contact_cadence": ["inner-circle", "active-network", "warm", "dormant"]
+    },
+    "org": {
+      "dir": "graph/orgs",
+      "status": ["active", "dormant", "archived"],
+      "optional": ["org_type", "url", "notion_url"]
+    },
+    "project": {
+      "dir": "graph/projects",
+      "status": ["idea", "planning", "active", "on-hold", "parking-lot", "complete", "archived"],
+      "optional": ["owner", "priority", "next_action", "key_deadline", "review_by", "trigger_conditions", "keywords", "workspace_url", "deliverables", "notion_url"],
+      "priority": ["critical", "high", "medium", "low", "someday"]
+    },
+    "paper": {
+      "dir": "graph/papers",
+      "status": ["idea", "scoped", "lit-complete", "irb", "data", "analysis", "drafting", "internal-review", "external-review", "submitted", "revision", "accepted", "shelved"],
+      "optional": ["owner", "priority", "next_action", "target_date", "review_by", "stage_entered", "keywords", "deliverables", "notion_url", "data_class"],
+      "priority": ["critical", "high", "medium", "low", "someday"]
+    },
+    "venue": {
+      "dir": "graph/venues",
+      "status": ["open", "closed", "rolling"],
+      "optional": ["venue_type", "url", "word_limit", "review_norms", "response_window", "notion_url"]
+    },
+    "engagement": {
+      "dir": "graph/engagements",
+      "status": ["prospect", "active", "paused", "complete", "archived"],
+      "optional": ["owner", "next_action", "review_by", "raw_location", "raw_sensitivity", "workspace_url", "deliverables", "notion_url"]
+    },
+    "source": {
+      "dir": "graph/sources",
+      "status": ["unfiled", "filed", "cited", "expired"],
+      "optional": ["url", "author", "published", "keywords", "captured_on", "notion_url"]
+    },
+    "decision": {
+      "dir": "graph/decisions",
+      "status": ["open", "decided", "revisit", "reversed"],
+      "optional": ["owner", "decided_on", "rationale", "revisit_by", "notion_url"]
+    }
+  },
+
+  "deliverable_fields": {
+    "required": ["title", "type", "date", "status"],
+    "optional": ["version", "share", "url", "keywords", "sent_to", "sent_on", "mirror"],
+    "type": ["pdf", "docx", "pptx", "link", "gamma", "xlsx"],
+    "status": ["draft", "final", "sent", "superseded"],
+    "share": ["private", "link-view", "public"]
+  },
+
+  "staleness": {
+    "_comment": "status values exempt from the stale warning: ideas and parked things are supposed to sit still.",
+    "active_statuses": ["active", "drafting", "analysis", "internal-review", "external-review", "revision", "data"],
+    "exempt_statuses": ["idea", "parking-lot", "on-hold", "shelved", "archived", "complete", "accepted", "dormant"],
+    "stale_after_days": 45
+  },
+
+  "leakage_patterns": {
+    "_comment": "Regexes that must never appear in the T1/T2 spine. Derived from hip-tier-router/references/gitignore-template.txt.",
+    "cap_table": "(?i)\\bcap[\\s_-]?table\\b",
+    "burn_rate": "(?i)\\b(burn[\\s_-]?rate|runway|monthly burn)\\b",
+    "verbatim_transcript": "(?i)\\b(verbatim transcript|full transcript|transcript\\.txt)\\b",
+    "signed_agreement": "(?i)\\b(signed (nda|agreement|contract)|executed agreement)\\b",
+    "email_address": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+    "us_phone": "\\b\\(?\\d{3}\\)?[\\s.-]\\d{3}[\\s.-]\\d{4}\\b",
+    "mrn_like": "(?i)\\bmrn[\\s:#-]*\\d{6,}\\b",
+    "secret_openai": "\\bsk-[A-Za-z0-9]{16,}",
+    "secret_github": "\\bghp_[A-Za-z0-9]{20,}",
+    "secret_aws": "\\bAKIA[0-9A-Z]{16}\\b",
+    "secret_anthropic": "\\bsk-ant-[A-Za-z0-9-]{16,}"
+  },
+
+  "leakage_allow_fields": {
+    "_comment": "Fields where a pattern match is expected and allowed. email on a person entity is the obvious one.",
+    "email_address": ["email"]
+  }
+}
