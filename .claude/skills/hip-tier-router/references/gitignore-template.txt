@@ -1,0 +1,26 @@
+# Per-client repo .gitignore (T3 repo) — exclude all T4/T5 + staging.
+# Adjust folder names to the actual engagement.
+
+# T4 — client confidential (never commit)
+*Company Intel*/
+*Timelog*/
+**/*Transcript*.txt
+**/*Funding*Tracker*
+**/evidence-local/
+**/*Cap*Table*
+
+# T5 — legal/contract (never commit)
+*Contract*/
+*Agreement*/
+*NDA*
+
+# Tier 2 — belongs in the HIP-org repo, not this per-client repo
+**/_T2 staging*/
+
+# Sensitive personal / COI
+**/*COI*
+
+# OS / noise
+.DS_Store
+.Spotlight-V100
+.Trashes

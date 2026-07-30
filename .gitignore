@@ -1,0 +1,44 @@
+# Nothing above T2 belongs in this repo. These patterns are a backstop, not the
+# control -- scripts/graph.py validate is the control. Derived from
+# hip-tier-router/references/gitignore-template.txt.
+
+# T4 -- confidential (never commit)
+*Company Intel*/
+*Timelog*/
+**/*Transcript*
+**/*Cap*Table*
+**/*Funding*Tracker*
+**/evidence-local/
+**/*burn*rate*
+
+# T5 -- legal/contract (never commit)
+*Contract*/
+*Agreement*/
+**/*NDA*
+
+# Sensitive personal
+**/*COI*
+
+# Credentials -- there should never be any, since scripts/ makes no model calls
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# OS / editor noise
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local settings override (personal machine paths, not shared)
+.claude/settings.local.json
