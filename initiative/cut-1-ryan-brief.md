@@ -1,4 +1,4 @@
-# Cut 1 — Brief for Brian
+# Cut 1 — Brief for Ryan (Ryan Weigand, UVA Corporate & Foundation Relations)
 ### The Community Value Initiative for AI Infrastructure (working title)
 **Build the relationship, not just the project.**
 *One page, distilled from the master case. Bracketed items pending Matt's verification.*
