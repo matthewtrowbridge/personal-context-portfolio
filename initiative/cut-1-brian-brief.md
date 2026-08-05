@@ -1,10 +1,11 @@
 # Cut 1 — Brief for Brian
 ### The Community Value Initiative for AI Infrastructure (working title)
+**Build the relationship, not just the project.**
 *One page, distilled from the master case. Bracketed items pending Matt's verification.*
 
 ---
 
-**The problem in one number.** In Q1 2026 alone, communities blocked or delayed 75+ U.S. data center projects worth ~$130 billion — matching all of 2025's disruption in three months. Opposition groups doubled in a quarter (396 → 833, across 49 states); 100+ municipalities have moratoriums; Gallup finds 71% of Americans oppose a data center near them. The bottleneck in the AI build-out is no longer power or capital — it is consent. And the communities aren't wrong: they're asked to absorb real, permanent costs for uncertain benefits, with no instrument to price or negotiate the difference.
+**The problem.** Every data center project has one moment when the operator and the community sit down with everything still open — and it happens exactly once. Run today as a rushed permitting gate, it increasingly produces neither permit nor peace: in Q1 2026 alone, communities blocked or delayed 75+ U.S. projects worth ~$130 billion, matching all of 2025 in three months. Opposition groups doubled in a quarter (396 → 833, across 49 states); 100+ municipalities have moratoriums; Gallup finds 71% of Americans oppose a data center near them. And a permit is the wrong prize anyway: the building lasts decades while the hardware inside turns over every three to five years, changing the project's demands on the grid, the water, and the neighbors in ways no one can specify at signing. Only a durable working relationship covers that — and communities, who aren't wrong about the costs, have no instrument to negotiate one. The next bottleneck in AI isn't compute; it's this relationship.
 
 **The arithmetic.** A one-year delay on a single $10B campus destroys roughly $700M–$1B in carrying cost alone. This initiative runs at roughly [$3–5M]/year. Convert one blocked project — or save one year on one campus — and it repays decades of its own cost. This is the IIHS model: a small, independent research institution whose evidence restructures how an industry prices risk.
 
@@ -12,10 +13,10 @@
 
 **Why this founder.** Matt Trowbridge — physician, public health researcher, and Associate Professor at the UVA School of Medicine — was that partnership's Principal Investigator: a LEED health credit used by 200+ projects, the first health metrics inside GRESB's ESG benchmark (252 portfolios, 32,000+ assets), AIA training reaching 90,000+ architects. He then served as Chief Medical Officer of the WELL Building Institute and now advises data center developers on health impact assessment inside live projects. His career is about making community value measurable and investable — a thesis he stated publicly at Greenbuild in 2015. This initiative is that playbook's second application. No university has claimed this chair; within eighteen months, one will have.
 
-**What we're building — three arms:**
-1. **Practitioner tools, private until validated.** A community-value pricing tool iterated under NDA with operators inside live pro formas — credibility with practitioners before visibility.
-2. **Open scholarship.** A new dataset on siting outcomes and community terms, built with [Mike Lenox]; peer-reviewed papers plus high-impact op-eds establishing UVA as the academic voice on this topic.
-3. **Standards partnerships (year 2+).** Pilot validated instruments with GRESB, LEED, and peers — benchmark before certify, the path the founder has already walked inside GRESB itself.
+**What we're building — equip the negotiation, sustain the relationship, scale the practice:**
+1. **Equip the negotiation: practitioner tools, private until validated.** A community-value pricing tool iterated under NDA with operators inside live pro formas — credibility with practitioners before visibility.
+2. **Sustain the relationship: open scholarship.** A new dataset on siting outcomes and community terms, built with [Mike Lenox] — the shared ledger both sides can return to as projects change — plus peer-reviewed papers and high-impact op-eds establishing UVA as the academic voice on this topic.
+3. **Scale the practice: standards partnerships (year 2+).** Pilot validated instruments with GRESB, LEED, and peers — benchmark before certify, the path the founder has already walked inside GRESB itself.
 
 **Who.** Committed: [Lenox] (Darden), [Lindemann] (Center for Real Estate). Recruiting: Darden faculty affiliated with the LaCross Institute already publishing on data center community costs; [Colmer] (environmental economics) where the data align with his lab; Biocomplexity as a standing ally. Longer-term: Cantrell/AEL on land use and siting design.
 

@@ -8,5 +8,6 @@ Canonical messaging for Matt Trowbridge's UVA initiative on data centers and com
 | `master-case.md` | The canonical master case (9 sections). Source of truth for all messaging. |
 | `founder-positioning.md` | Verified founder evidence bank (GHP receipts, Greenbuild 2015 quote, source links) + 4 audience-calibrated bio variants. |
 | `cut-1-brian-brief.md` | Cut 1: one-page internal brief for Brian. Template for future audience cuts. |
+| `messaging-map.md` | The locked narrative architecture: spine, headline system, aphorism variants, stakeholder map, usage rules. Component sheet for designing artifacts. |
 
 **How to make a new cut:** start from `master-case.md`, select sections for the audience, swap in the matching bio variant from `founder-positioning.md`, keep placeholders bracketed, and log the cut here.
