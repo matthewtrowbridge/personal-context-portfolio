@@ -4,6 +4,8 @@ This repo is Matt Trowbridge's personal context portfolio (templates in `templat
 
 ## ⚑ Active project: Community Value Initiative for AI Infrastructure (`initiative/`)
 
+> **⚠️ CANONICAL HOME MOVED (2026-08-05):** the project's system of record is **`matthewtrowbridge/data-center-hia`** — messaging materials now live at `uva-academic/consortium/2026-08-05_messaging-architecture-import/` there, gated by its `RECONCILIATION.md` (which supersedes parts of this directory: the working title yields to the locked naming set, "net-positive shared value" phrasing needs the no-netting scrub, and the Darden-first home framing is under adjudication). Do initiative work in that repo. This directory is retained as the session-of-origin record; do not extend it without checking the reconciliation memo first.
+
 The `initiative/` directory holds the canonical fundraising/positioning materials for Matt's UVA initiative on data centers and community value. **Before drafting anything related to this initiative — briefs, decks, emails, op-eds, bios — read these files first and treat them as the source of truth:**
 
 1. `initiative/decisions.md` — locked decisions (anchor number, structure, roster, positioning, messaging architecture) and open items. Do not re-litigate locked decisions.
