@@ -30,7 +30,7 @@
 
 | Stakeholder | What they get | Register / lead message |
 |---|---|---|
-| Host communities & residents | A credible seat and a real ledger — costs and benefits priced, not asserted; leverage without moratorium | "You aren't wrong. You've been under-equipped." |
+| Host communities & residents | A credible seat and a real ledger — costs and benefits priced, not asserted; full information before commitment; leverage without moratorium | "Informed, not surprised" — a neutral, transparent framework for negotiating durable shared value |
 | Community advocates / activists | Independent rigorous data replacing anecdote; a constructive channel that doesn't require "no" | Evidence as power |
 | AI infrastructure industry (operators, developers, hyperscalers) | Faster, more durable approvals; social license that survives change; de-risked capital | D-line (cheapest insurance / durable license); *Develop the relationship, not just the site* |
 | Local & state officials, regulators | Neutral evidence base for conditions and agreements; templates instead of one-off fights | The referee they can cite |
@@ -41,6 +41,15 @@
 
 **Terminology note:** umbrella term for the industry side is **"the AI infrastructure industry"** (covers operators, developers, and the hyperscalers behind them); use "operators" when speaking of NDA engagement specifically.
 
+## The neutral-platform frame (tone law — governs everything below)
+
+Every artifact will be visible to every audience — the website, the framework, the papers are public. So every artifact must read acceptably to **both sides simultaneously**: a community reader must never conclude "this is the AI industry in disguise," and an industry reader must never conclude "this sets us up as the villain." The stable position is a **neutral, rational platform** — a tool, not a side.
+
+- **Shared premise, stated affirmatively:** this infrastructure genuinely needs to be built, and built quickly. The way it is being built now is producing demonstrable negative impacts and little shared value. If everyone wants that to be different so the build-out can proceed, here is a framework — research-based, transparent, neutral — for getting there.
+- **Asymmetry is validated implicitly, never as grievance.** No "you're right to be upset" headlines. The information gap is presented as an *addressable design flaw of the current process*, not as anyone's fault: "None of this requires a villain."
+- **The positive mechanics carry the message:** informed communities with no surprises; neutral, transparent pricing and decision metrics; performance criteria agreed on a basis of intent and trust; everyone working to meet project goals, minimize negative impacts, and land a net-positive for all parties.
+- **The performance-spec dialogue** is what "informed" concretely means — communities and officials understand: *why* the specs are what they are; the *constraints of current technology* (power, cooling, water, latency); *what operators need to do* and when; how it all *plays into community design and land use*; how *existing standards and government incentives* are leveraged; and how transparent, well-intentioned relationship-building becomes *the incentivized standard over time*.
+
 ## Usage rules
 
 - The aphorism or the hook opens every artifact; the method line never leads.
@@ -48,3 +57,4 @@
 - Anchor stat stays: Data Center Watch Q1 2026, ~$130B, 75+ projects.
 - Every stakeholder message must be derivable from the spine — no audience gets a message that contradicts another audience's.
 - Principles language stays light: one sentence (transparency, rigor, independence, both sides of the table), not a manifesto.
+- Dual-visibility check before any artifact ships: read it once as a county supervisor, once as an operator's VP of development. Both must be able to bring it to their own side without editing.
